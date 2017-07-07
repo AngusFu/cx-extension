@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>超星视频</title>
+    <link rel="shortcut icon" href="./assets/icon.png">
+    <link rel="stylesheet" href="./assets/video-js.min.css">
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url('./assets/bg.jpg');
+        background-size: cover;
+    }
+    .container {
+        display: flex;
+        width: 1200px;
+        height: 480px;
+        overflow: hidden;
+        margin: 30px auto;
+    }
+    .video-js {
+        width: 800px;
+        height: 480px;
+        background: #000;
+    }
+    .list-wrap {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 350px;
+        margin-left: 50px;
+        padding: 20px;
+        color: #444;
+        overflow: hidden;
+        background: rgba(255, 255, 255, .2);
+    }
+    .list-wrap .info {
+        padding-bottom: 20px;
+    }
+    .info input {
+        width: 250px;
+        line-height: 1.6;
+        padding: 2px 8px;
+        border: 1px solid rgba(9, 9, 9, .3);
+        background: transparent;
+    }
+    .info input:focus {
+        outline: 0;
+        border-color: cadetblue;
+        border: 1px solid rgba(9, 9, 9, .4);
+    }
+    .info p {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .info p span {
+        display: inline-block;
+        width: 30px;
+        margin-left: 5px;
+        padding: 2px 5px;
+        background: #ec7c07;
+        color: #fff;
+        text-align: center;
+        font-weight: normal;
+        cursor: pointer;
+    }
+    .info p span.active {
+        background: #f70707;
+    }
+
+    .list-wrap ul {
+        flex: 1;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        line-height: 2;
+        overflow: auto;
+    }
+    .list-wrap ul li {
+        cursor: pointer;
+    }
+    
+
+    .current {
+        font-weight: bold;
+        color: #2876f9;
+    }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <video class="video-js" id="vPlayerCon" controls></video>
+    <div id="app"></div>
+</div>
+<script src="./js/vue.js"></script>
+<script src="./js/jq.js"></script>
+<script src="./js/flv.js"></script>
+<script src="./js/video.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+
+</html>
