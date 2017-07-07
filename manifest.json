@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "超星视频",
-    "description": "超星视频",
+    "name": "chaoxing-helper",
+    "description": "chaoxing-helper",
     "version": "1.0.0",
     "permissions": [
         "tabs",
